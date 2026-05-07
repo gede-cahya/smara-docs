@@ -16,6 +16,7 @@ import Memory from "./docs/UserGuide/Memory";
 import Dashboard from "./docs/UserGuide/Dashboard";
 import SSH from "./docs/UserGuide/SSH";
 import Graphify from "./docs/UserGuide/Graphify";
+import Workflow from "./docs/UserGuide/Workflow";
 import CLICommands from "./docs/Reference/CLICommands";
 import FAQDocs from "./docs/Reference/FAQDocs";
 
@@ -50,6 +51,7 @@ export default function App() {
             <Route path="user-guide/dashboard" element={<Dashboard />} />
             <Route path="user-guide/ssh" element={<SSH />} />
             <Route path="user-guide/graphify" element={<Graphify />} />
+            <Route path="user-guide/workflow" element={<Workflow />} />
             <Route path="reference/cli-commands" element={<CLICommands />} />
             <Route path="reference/faq" element={<FAQDocs />} />
           </Route>

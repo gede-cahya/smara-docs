@@ -38,6 +38,7 @@ const sections = [
       { label: "Dashboard", path: "/docs/user-guide/dashboard" },
       { label: "SSH Remote", path: "/docs/user-guide/ssh" },
       { label: "Graphify", path: "/docs/user-guide/graphify" },
+      { label: "Workflow Engine", path: "/docs/user-guide/workflow" },
     ],
   },
   {
@@ -60,6 +61,7 @@ const iconMap: Record<string, React.ElementType> = {
   Dashboard: LayoutDashboard,
   "SSH Remote": Globe,
   Graphify: GitBranch,
+  "Workflow Engine": GitBranch,
   "CLI Commands": Command,
   "FAQ & Troubleshooting": HelpCircle,
 };

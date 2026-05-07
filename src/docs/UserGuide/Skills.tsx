@@ -64,6 +64,31 @@ smara skill timeline <name>      # Execution history
 smara skill dashboard          # Interactive skill dashboard (web)`}</code>
       </pre>
 
+      <h2 className="text-lg font-semibold text-smara-text mt-8 mb-2">Parameter Substitution</h2>
+      <p className="text-sm text-smara-muted mb-3">
+        Skill steps support dynamic parameter substitution using <code className="text-smara-green">__PARAM__name</code> placeholders:
+      </p>
+      <pre className="bg-smara-card border border-white/5 rounded-lg p-4 overflow-x-auto text-sm text-smara-text font-mono">
+        <code>{`{
+  "name": "go-refactor",
+  "steps": [
+    { "tool": "file_read", "args": { "path": "__PARAM__file" } },
+    { "tool": "agent_ask", "args": { "prompt": "Refactor __PARAM__file using __PARAM__style" } }
+  ]
+}`}</code>
+      </pre>
+      <p className="text-sm text-smara-muted mt-2 mb-4">
+        Parameters are substituted recursively in strings, maps, and arrays at runtime.
+      </p>
+
+      <h2 className="text-lg font-semibold text-smara-text mt-8 mb-2">Running Skills from Agents</h2>
+      <p className="text-sm text-smara-muted mb-3">
+        Agents can invoke skills directly via the built-in <code className="text-smara-green">skill_run</code> tool:
+      </p>
+      <pre className="bg-smara-card border border-white/5 rounded-lg p-4 overflow-x-auto text-sm text-smara-text font-mono">
+        <code>{`skill_run(skill_name="react-best-practices")`}</code>
+      </pre>
+
       <h2 className="text-lg font-semibold text-smara-text mt-8 mb-2">Auto-Refinement</h2>
       <p className="text-sm text-smara-muted mb-4">
         Smara analyzes skill execution history and suggests improvements. Enable auto-refinement in your config:

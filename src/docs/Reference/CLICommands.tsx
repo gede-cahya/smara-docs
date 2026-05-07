@@ -95,7 +95,7 @@ export default function CLICommands() {
         commands={[
           ["smara workspace list", "List available workspaces"],
           ["smara workspace switch <name>", "Switch to a workspace"],
-          ["smara workspace create <name>", "Create a new workspace"],
+          ["smara workspace create <name> --path <dir>", "Create a new workspace at specific path"],
           ["smara workspace delete <name>", "Delete a workspace"],
         ]}
       />
@@ -108,6 +108,16 @@ export default function CLICommands() {
           ["smara ssh upload <host> <src> <dst>", "Upload file/directory"],
           ["smara ssh download <host> <src> <dst>", "Download file/directory"],
           ["smara ssh sync <host> <src> <dst>", "Sync local and remote directories"],
+        ]}
+      />
+
+      <CommandTable
+        title="Workflow"
+        commands={[
+          ["smara workflow list", "List saved workflows"],
+          ["smara workflow run <name>", "Execute a workflow"],
+          ["smara workflow create <name>", "Create from interactive template"],
+          ["smara workflow delete <name>", "Remove a workflow"],
         ]}
       />
 
