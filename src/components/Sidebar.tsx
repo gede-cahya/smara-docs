@@ -39,6 +39,7 @@ const sections = [
       { label: "SSH Remote", path: "/docs/user-guide/ssh" },
       { label: "Graphify", path: "/docs/user-guide/graphify" },
       { label: "Workflow Engine", path: "/docs/user-guide/workflow" },
+      { label: "Feature Guide", path: "/docs/user-guide/feature-guide" },
     ],
   },
   {
@@ -62,6 +63,7 @@ const iconMap: Record<string, React.ElementType> = {
   "SSH Remote": Globe,
   Graphify: GitBranch,
   "Workflow Engine": GitBranch,
+  "Feature Guide": BookOpen,
   "CLI Commands": Command,
   "FAQ & Troubleshooting": HelpCircle,
 };
