@@ -40,6 +40,7 @@ const sections = [
       { label: "Graphify", path: "/docs/user-guide/graphify" },
       { label: "Workflow Engine", path: "/docs/user-guide/workflow" },
       { label: "Feature Guide", path: "/docs/user-guide/feature-guide" },
+      { label: "Browser Subagent", path: "/docs/user-guide/browser-subagent" },
     ],
   },
   {
@@ -64,6 +65,7 @@ const iconMap: Record<string, React.ElementType> = {
   Graphify: GitBranch,
   "Workflow Engine": GitBranch,
   "Feature Guide": BookOpen,
+  "Browser Subagent": Globe,
   "CLI Commands": Command,
   "FAQ & Troubleshooting": HelpCircle,
 };

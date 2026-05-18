@@ -18,6 +18,7 @@ import SSH from "./docs/UserGuide/SSH";
 import Graphify from "./docs/UserGuide/Graphify";
 import Workflow from "./docs/UserGuide/Workflow";
 import FeatureGuide from "./docs/UserGuide/FeatureGuide";
+import BrowserSubagent from "./docs/UserGuide/BrowserSubagent";
 import CLICommands from "./docs/Reference/CLICommands";
 import FAQDocs from "./docs/Reference/FAQDocs";
 
@@ -54,8 +55,9 @@ export default function App() {
             <Route path="user-guide/graphify" element={<Graphify />} />
             <Route path="user-guide/workflow" element={<Workflow />} />
             <Route path="user-guide/feature-guide" element={<FeatureGuide />} />
+            <Route path="user-guide/browser-subagent" element={<BrowserSubagent />} />
             <Route path="reference/cli-commands" element={<CLICommands />} />
-            <Route path="reference/cli-commands" element={<CLICommands />} />
+            <Route path="reference/faq" element={<FAQDocs />} />
           </Route>
         </Routes>
       </div>
