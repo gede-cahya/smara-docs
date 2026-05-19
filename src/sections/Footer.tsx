@@ -39,7 +39,7 @@ export default function Footer() {
           <p className="flex items-center gap-1 justify-start md:justify-end">
             Made with <Heart size={14} className="text-red-400 fill-red-400" /> by Gede Cahya
           </p>
-          <p className="mt-1">MIT License &middot; v1.18.1</p>
+          <p className="mt-1">MIT License &middot; v1.20.9</p>
         </div>
       </div>
     </footer>

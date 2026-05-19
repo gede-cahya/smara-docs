@@ -50,7 +50,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-smara-green/10 border border-smara-green/20 text-sm text-smara-green mb-8"
         >
           <Sparkles size={14} />
-          v1.18.1 — Now with Remote MCP &amp; OpenCode integration
+          v1.20.9 — Web Observability: Token, Duration, Prompt & Cost Metadata
         </motion.div>
 
         <motion.h1
