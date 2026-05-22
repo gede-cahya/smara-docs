@@ -6,7 +6,7 @@ const cwd = process.cwd()
 const repoRoot = cwd.endsWith('docs-site') ? join(cwd, '..') : cwd
 const root = repoRoot
 const cmdDir = join(root, 'cmd', 'smara')
-const docsDir = statSync(join(root, 'docs-site'), { throwIfNoEntry: false })?.isDirectory() ? join(root, 'docs-site') : root
+const docsDir = join(root, 'docs-site')
 const skipDirs = new Set(['node_modules', 'dist', '.vitepress'])
 
 function walk(dir, predicate = () => true) {
