@@ -1,27 +1,12 @@
 #!/usr/bin/env node
 import { readdirSync, readFileSync, statSync } from 'node:fs'
-import { dirname, join, relative } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { join, relative } from 'node:path'
 
 const cwd = process.cwd()
-const scriptDir = dirname(fileURLToPath(import.meta.url))
-const candidates = [
-  cwd,
-  join(cwd, '..'),
-  join(scriptDir, '..'),
-  join(scriptDir, '..', '..', 'Smara CLI'),
-  '/home/cahya/2026/Smara CLI'
-]
-const root = candidates.find(dir => {
-  try { return statSync(join(dir, 'cmd', 'smara')).isDirectory() } catch { return false }
-})
-if (!root) {
-  console.error('Cannot find Smara CLI repo root containing cmd/smara')
-  process.exit(1)
-}
+const repoRoot = cwd.endsWith('docs-site') ? join(cwd, '..') : cwd
+const root = repoRoot
 const cmdDir = join(root, 'cmd', 'smara')
-const localDocsDir = join(cwd, '.vitepress')
-const docsDir = statSync(localDocsDir, { throwIfNoEntry: false }) ? cwd : join(root, 'docs-site')
+const docsDir = statSync(join(root, 'docs-site'), { throwIfNoEntry: false })?.isDirectory() ? join(root, 'docs-site') : root
 const skipDirs = new Set(['node_modules', 'dist', '.vitepress'])
 
 function walk(dir, predicate = () => true) {

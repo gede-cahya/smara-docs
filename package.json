@@ -10,7 +10,7 @@
     "docs:build": "vitepress build .",
     "preview": "vitepress preview . --host 0.0.0.0",
     "docs:preview": "vitepress preview . --host 0.0.0.0",
-    "docs:audit": "node scripts/audit-docs-cli.mjs",
+    "docs:audit": "node ../scripts/audit-docs-cli.mjs",
     "docs:check": "npm run docs:build && npm run docs:audit"
   },
   "devDependencies": {
