@@ -15,8 +15,9 @@ Referensi ini disusun dari source `cmd/smara/*.go` dan README agar docs mengikut
 | `smara dashboard` | Dashboard monitoring real-time. |
 | `smara analytics` | Analitik token, cost, model, request, prompt, dan skill. |
 | `smara web` | Jalankan Smara Web Interface. |
+| `smara claude-hook` | Hook integrasi Claude Code untuk menjalankan Smara sebagai command hook. |
 
-## Provider dan konfigurasi
+
 
 ```bash
 smara login
@@ -112,22 +113,27 @@ smara skill run <name>
 smara skill create <name> --format json
 smara skill install <url>
 smara skill search <query>
+smara skill recommend <query>
+smara skill suggest <query>
 smara skill info <name>
 smara skill publish <name>
 smara skill delete <name>
 smara skill registry sync
 smara skill tree
 smara skill stats <name>
+smara skill runs [name]
 smara skill analytics
 smara skill refine <name>
+smara skill lint [name]
+smara skill validate [name]
 smara skill export
 smara skill import
 ```
-
-Skill adalah automation recipe yang bisa dijalankan ulang. Cocok untuk workflow 3+ langkah seperti deploy, backup, release, monitoring, dan generate docs.
-
-## SSH dan deployment remote
-
+smara skill lint [name]
+smara skill validate [name]
+smara skill export
+smara skill import
+```
 ```bash
 smara ssh add-host prod --host 192.168.1.1 --user ubuntu --key ~/.ssh/id_rsa
 smara ssh list
