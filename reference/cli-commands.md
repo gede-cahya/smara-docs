@@ -129,11 +129,9 @@ smara skill validate [name]
 smara skill export
 smara skill import
 ```
-smara skill lint [name]
-smara skill validate [name]
-smara skill export
-smara skill import
-```
+
+## SSH, deploy, and 9drive
+
 ```bash
 smara ssh add-host prod --host 192.168.1.1 --user ubuntu --key ~/.ssh/id_rsa
 smara ssh list
@@ -150,9 +148,13 @@ smara deploy status prod
 smara deploy logs prod
 smara deploy stop prod
 smara deploy uninstall prod
+
+smara 9drive upload photo.jpg
+smara 9drive upload *.png
+smara 9drive upload --api-key 9d_live_xxx backup.zip
 ```
 
-Gunakan mode `plan` untuk operasi server berisiko agar agen menjelaskan rencana sebelum restart/deploy.
+Gunakan mode `plan` untuk operasi server berisiko agar agen menjelaskan rencana sebelum restart/deploy. `smara 9drive` menyediakan integrasi cloud storage 9drive untuk upload file/artifact; API key bisa diberikan via `--api-key` atau config `ninedrive_api_key`, dan endpoint bisa dioverride dengan `--base-url`.
 
 ## MCP
 
